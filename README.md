@@ -20,7 +20,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ​	大多数运用在常规的visual attention机制是top-down中一种。我们经常使用CNN训练，但我们没有想过这样一个问题：图像中更需要的倾向于关注的物体是怎样取出来的。
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/1.PNG)
 
 ​	由上图，典型而言，注意力机制运行在CNN特征上得出的是一个同等大小的网格区域，并没有将要关注的内容提取出来。而作者的方法，则能更多的关注图像中感兴趣的物体。
 
@@ -50,7 +50,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ​	原始的faster R-CNN多任务loss函数包含了4个成分，为RPN和最终的目标class proposals分别定义了分类以及bounding box regression输出。作者保留了这些成分，并增加了一个额外的multi-class loss成分去训练attribute predictor。
 
-​	![]()
+​	![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/2.PNG)
 
 ​	上图是这个模型的输出，每一个bounding box都被一个attribute class标签。
 
@@ -58,7 +58,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ​	对于captioning部分，也是本论文的重点了，这里作者引入了两个LSTM，top-down attention LSTM和language LSTM，其captioning模型的整个结构图如下：
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/3.PNG)
 
 ​	而且两个LSTM是交叉的，都有运用到彼此的输出。
 
@@ -72,7 +72,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ​        对于*k*个image feature vi的attention权重αi,j，是由top-down attention LSTM在每一个时刻利用自身的hidden state h1t产生的：
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/4.PNG)
 
 #### 3.2.2 Language LSTM
 
@@ -85,19 +85,19 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ​	而整个句子的概率分布是每一个单词的连乘。
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/5.PNG)
 
 #### 3.2.3 训练目标
 
 文章首先使用的是最小化cross entropy 
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/6.PNG)
 
 来进行训练的，其中y∗1:T是ground-truth caption。
 
 另外文章还用到了[SCST](https://arxiv.org/abs/1612.00563)中的强化学习方法来对CIDEr分数进行优化：
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/7.PNG)
 
 
 
