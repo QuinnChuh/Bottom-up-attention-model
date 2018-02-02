@@ -103,7 +103,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 贴图：
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/8.PNG)
 
 参数说明：
 
@@ -115,7 +115,7 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 下面是与其他论文算法的对比：
 
-![]()
+![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/9.PNG)
 
 其它算法说明：
 
