@@ -99,7 +99,44 @@ Top-down可视化注意力机制已经很普遍的运用在图像描述和视频
 
 ![](https://github.com/QuinnChuh/Bottom-up-attention-model/blob/master/imgs/7.PNG)
 
+## 4.结果分析
 
+贴图：
 
+![]()
 
+参数说明：
 
+​	Resnet是文章选取的一个baseline模型，用来代替bottom-up attention机制。也就是说这个baseline模型只有top-down的attention机制。
+
+​	ATT是指论文Self-critical sequence training for image captioning，2017所用的模型。
+
+​	输出也分两类进行说明，一个使用了SCST，一个没有。
+
+下面是与其他论文算法的对比：
+
+![]()
+
+其它算法说明：
+
+​	NIC：是google的 Show and tell: A neural image caption generator，2015
+
+​	MSR Captivator：From captions to visual concepts and back，2015
+
+​	M-RNN： Deep captioning with multimodal recurrent neural networks，2015
+
+​	LRCN：Long-term recurrent convolutional networks for visual recognition and description，2015
+
+​	Hard-Attention： Show, attend and tell:Neural image caption generation with visual attention，2015
+
+​	ATT-FCN： Image captioning with semantic attention，2016
+
+​	Review Net：Review networks for caption generation，2016
+
+​	MSM：Boosting image captioning with attributes，2016
+
+​	Adaptive： Knowing when to look: Adaptive attention via a visual sentinel for image captioning，2017
+
+​	PG-SPIDEr-TAG： Optimization of image description metrics using policy gradient methods，2016
+
+​	SCST:Att2all：Self-critical sequence training for image captioning，2017
